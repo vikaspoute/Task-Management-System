@@ -1,6 +1,6 @@
 # Task-Management-System
 
-![Task Management System](images/home_small.jpg)
+![Task Management System](images/home.jpg)
 
 The Task Management System is a web application designed to help users efficiently manage their tasks and projects. This project consists of an Angular frontend and a Java Spring Boot backend, utilizing a MySQL database for data storage.
 
