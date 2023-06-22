@@ -110,19 +110,19 @@ If you have any questions or suggestions regarding this project, please contact 
 
 # Some Image of this project
 
-# Login
+## Login
 ![Task Management System](images/login.jpg)
 
-# Registration
+## Registration
 ![Task Management System](images/register.jpg)
 
-# dashboard
+## dashboard
 ![Task Management System](images/dashboard.jpg)
 
-# configuration 
+## configuration 
 ![Task Management System](images/delete%20confirmation.jpg)
 
-# success
+## success
 ![Task Management System](images/sucess.jpg)
 
 
