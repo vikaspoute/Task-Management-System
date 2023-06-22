@@ -1,6 +1,8 @@
-# Task Management System
+Certainly! Here's an updated version of the README file with image titles:
 
-![Task Management System](/path/to/screenshot.png)
+# Task-Management-System
+
+![Task Management System](images/home.jpg)
 
 The Task Management System is a web application designed to help users efficiently manage their tasks and projects. This project consists of an Angular frontend and a Java Spring Boot backend, utilizing a MySQL database for data storage.
 
@@ -8,13 +10,10 @@ The Task Management System is a web application designed to help users efficient
 
 Before running the project, please ensure that you have the following dependencies installed on your machine:
 
-- Node.js (version 12 or above): You can download and install Node.js from the official website: [https://nodejs.org](https://nodejs.org)
-- Angular CLI: Install the Angular CLI globally by running the following command in your terminal or command prompt:
-  ```
-  npm install -g @angular/cli
-  ```
-- Java Development Kit (JDK) (version 8 or above): Download and install the JDK from the Oracle website or use your preferred package manager.
-- MySQL Server: Install MySQL Server locally or use a cloud-based MySQL service provider.
+- [Node.js](https://nodejs.org) (version 12 or above)
+- [Angular CLI](https://angular.io/cli) (version 12 or above)
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) (version 8 or above)
+- [MySQL Server](https://dev.mysql.com/downloads/mysql/) (version 8 or above)
 
 ## Installation
 
@@ -54,8 +53,8 @@ To set up the project, follow these steps:
      cd ../backend
      ```
 
-   - Import the project into your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
-   - Resolve the dependencies specified in the `pom.xml` file using your IDE or Maven.
+   - Import the project into your preferred Java IDE (e.g., [IntelliJ IDEA](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/ide/)).
+   - Resolve the dependencies specified in the `pom.xml` file using your IDE or [Maven](https://maven.apache.org/).
 
 5. Configure the database connection:
 
@@ -101,14 +100,30 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the MIT License. See the [LICENSE](vikaspoute@gmail.com) file for more information.
 
 ## Contact
 
-If you have any questions or suggestions regarding this project, please contact the
-
- project owner at [email protected]
+If you have any questions or suggestions regarding this project, please contact the project owner at [vikaspoute@gmail.com]
 
 ---
+
+# Some Image of this project
+
+# Login
+![Task Management System](images/login.jpg)
+
+# Registration
+![Task Management System](images/register.jpg)
+
+# dashboard
+![Task Management System](images/dashboard.jpg)
+
+# configuration 
+![Task Management System](images/delete%20confirmation.jpg)
+
+# success
+![Task Management System](images/sucess.jpg)
+
 
 Thank you for using the Task Management System! We hope it helps you stay organized and productive.
