@@ -1,6 +1,6 @@
 # Task-Management-System
 
-![Task Management System](images/home.jpg)
+![Task Management System](images/home_small.jpg)
 
 The Task Management System is a web application designed to help users efficiently manage their tasks and projects. This project consists of an Angular frontend and a Java Spring Boot backend, utilizing a MySQL database for data storage.
 
@@ -98,30 +98,31 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](vikaspoute@gmail.com) file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE)
+
+ file for more information.
 
 ## Contact
 
-If you have any questions or suggestions regarding this project, please contact the project owner at [vikaspoute@gmail.com]
+If you have any questions or suggestions regarding this project, please contact the project owner at vikaspoute@gmail.com.
 
 ---
 
-# Some Image of this project
+# Some Images of this Project
 
 ## Login
-![Task Management System](images/login.jpg)
+![Login](images/login_small.jpg)
 
 ## Registration
-![Task Management System](images/register.jpg)
+![Registration](images/register_small.jpg)
 
-## dashboard
-![Task Management System](images/dashboard.jpg)
+## Dashboard
+![Dashboard](images/dashboard_small.jpg)
 
-## configuration 
-![Task Management System](images/delete%20confirmation.jpg)
+## Configuration
+![Configuration](images/delete_confirmation_small.jpg)
 
-## success
-![Task Management System](images/sucess.jpg)
-
+## Success
+![Success](images/success_small.jpg)
 
 Thank you for using the Task Management System! We hope it helps you stay organized and productive.
