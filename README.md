@@ -1,5 +1,3 @@
-Certainly! Here's an updated version of the README file with image titles:
-
 # Task-Management-System
 
 ![Task Management System](images/home.jpg)
