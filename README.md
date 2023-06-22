@@ -98,31 +98,30 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE)
-
- file for more information.
+This project is licensed under the MIT License. See the [LICENSE](vikaspoute@gmail.com) file for more information.
 
 ## Contact
 
-If you have any questions or suggestions regarding this project, please contact the project owner at vikaspoute@gmail.com.
+If you have any questions or suggestions regarding this project, please contact the project owner at [vikaspoute@gmail.com]
 
 ---
 
-# Some Images of this Project
+# Some Image of this project
 
 ## Login
-![Login](images/login_small.jpg)
+![Task Management System](images/login.jpg)
 
 ## Registration
-![Registration](images/register_small.jpg)
+![Task Management System](images/register.jpg)
 
-## Dashboard
-![Dashboard](images/dashboard_small.jpg)
+## dashboard
+![Task Management System](images/dashboard.jpg)
 
-## Configuration
-![Configuration](images/delete_confirmation_small.jpg)
+## configuration 
+![Task Management System](images/delete%20confirmation.jpg)
 
-## Success
-![Success](images/success_small.jpg)
+## success
+![Task Management System](images/sucess.jpg)
+
 
 Thank you for using the Task Management System! We hope it helps you stay organized and productive.
