@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col offset-mx-3">
+      <div class="card">
+        <div class="card-head">Exam Portal - Login</div>
+        <div class="card-body">
+          <div class="row">
+            <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+              <div class="col-md-6 offset-md-3">
+                <!-- email -->
+                <mat-form-field appearance="outline">
+                  <mat-label>email</mat-label>
+                  <input
+                    matInput
+                    formControlName="email"
+                    [(ngModel)]="user.email"
+                    name="email"
+                    placeholder="email"
+                  />
+                  <mat-icon matSuffix>person</mat-icon>
+                  <mat-error
+                    *ngIf="
+                      loginForm.get('email')?.hasError('required') &&
+                      loginForm.get('email')?.touched
+                    "
+                  >
+                    email is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      loginForm.get('email')?.hasError('emailValidator') &&
+                      loginForm.get('email')?.touched
+                    "
+                  >
+                    Invalid email.
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Password -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input
+                    type="password"
+                    matInput
+                    formControlName="password"
+                    [(ngModel)]="user.password"
+                    name="password"
+                    placeholder="User Password"
+                  />
+                  <mat-icon matSuffix>lock</mat-icon>
+                  <mat-error
+                    *ngIf="
+                      loginForm.get('password')?.hasError('required') &&
+                      loginForm.get('password')?.touched
+                    "
+                  >
+                    Password is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      loginForm
+                        .get('password')
+                        ?.hasError('passwordValidator') &&
+                      loginForm.get('password')?.touched
+                    "
+                  >
+                    Invalid password format
+                  </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

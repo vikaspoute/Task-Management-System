@@ -1,0 +1,91 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col offset-mx-3">
+      <div class="card">
+        <div class="card-head">Exam Portal - Registration</div>
+        <div class="card-body">
+          <div class="row">
+            <form [formGroup]="signupForm" (ngSubmit)="userRegistration()">
+              <div class="col-md-6 offset-md-3">
+                <!-- Email -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input type="mail" matInput formControlName="email" [(ngModel)]="user.email" name="email"
+                    placeholder="User Email">
+                  <mat-icon matSuffix>mail</mat-icon>
+                  <mat-error *ngIf="signupForm.get('email')?.hasError('required') && signupForm.get('email')?.touched">
+                    Email is required
+                  </mat-error>
+                  <mat-error *ngIf="signupForm.get('email')?.hasError('email') && signupForm.get('email')?.touched">
+                    Invalid email format
+                  </mat-error>
+                  <mat-error
+                    *ngIf="signupForm.get('email')?.hasError('emailValidator') && signupForm.get('email')?.touched">
+                    Invalid email address
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Password -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput formControlName="password" [(ngModel)]="user.password" name="password"
+                    placeholder="User Password">
+                  <mat-icon matSuffix>lock</mat-icon>
+                  <mat-error
+                    *ngIf="signupForm.get('password')?.hasError('required') && signupForm.get('password')?.touched">
+                    Password is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="signupForm.get('password')?.hasError('passwordValidator') && signupForm.get('password')?.touched">
+                    Invalid password format
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- First Name -->
+                <mat-form-field appearance="outline">
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="firstName" [(ngModel)]="user.firstName" name="firstName"
+                    placeholder="User First Name">
+                  <mat-icon matSuffix>person</mat-icon>
+                  <mat-error
+                    *ngIf="signupForm.get('firstName')?.hasError('required') && signupForm.get('firstName')?.touched">
+                    First name is required
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Last Name -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput formControlName="lastName" [(ngModel)]="user.lastName" name="lastName"
+                    placeholder="User Last Name">
+                  <mat-icon matSuffix>person</mat-icon>
+                  <mat-error
+                    *ngIf="signupForm.get('lastName')?.hasError('required') && signupForm.get('lastName')?.touched">
+                    Last name is required
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Contact -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Contact No</mat-label>
+                  <input matInput formControlName="phone" [(ngModel)]="user.phone" name="phone"
+                    placeholder="User Contact Number">
+                  <mat-icon matSuffix>phone</mat-icon>
+                  <mat-error *ngIf="signupForm.get('phone')?.hasError('required') && signupForm.get('phone')?.touched">
+                    Contact number is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="signupForm.get('phone')?.hasError('phoneNumberValidator') && signupForm.get('phone')?.touched">
+                    Invalid phone number format
+                  </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
