@@ -1,0 +1,90 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col offset-mx-3">
+      <div class="card">
+        <div class="card-header"> {{taskId ? 'Update New Task' : 'Add New Task'}} </div>
+        <div class="card-body">
+          <div class="row">
+            <form [formGroup]="taskForm" (ngSubmit)="submitTask()">
+              <!-- Task id -->
+              <div class="col-md-6 offset-md-3">
+                <mat-form-field appearance="outline" *ngIf="!taskId" [hidden]="!taskId">
+                  <mat-label>Task Id</mat-label>
+                  <input matInput formControlName="taskId" [(ngModel)]="taskId" required>
+                </mat-form-field>
+
+                <!-- Task Title -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Task Title</mat-label>
+                  <input matInput formControlName="taskName" [(ngModel)]="tasks.taskName" required>
+                  <mat-error *ngIf="taskForm.get('taskName')?.invalid && taskForm.get('taskName')?.touched">
+                    Task Title is required
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Description -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Description</mat-label>
+                  <textarea matInput formControlName="description" [(ngModel)]="tasks.description" required></textarea>
+                  <mat-error *ngIf="taskForm.get('description')?.invalid && taskForm.get('description')?.touched">
+                    Description is required
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Due Date -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Due Date</mat-label>
+                  <input matInput [matDatepicker]="picker" formControlName="dueDate" [(ngModel)]="tasks.dueDate"
+                    required>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                  <mat-error *ngIf="taskForm.get('dueDate')?.invalid && taskForm.get('dueDate')?.touched">
+                    Due Date is required
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Assigned User -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Assigned User</mat-label>
+                  <mat-select formControlName="assignedTo" [(value)]="tasks.assignedTo.userId">
+                    <mat-option *ngFor="let user of users" [value]="user.userId">{{ user.email }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <!-- Priority -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Priority</mat-label>
+                  <mat-select formControlName="priority" [(ngModel)]="tasks.priority">
+                    <mat-option value="High">High</mat-option>
+                    <mat-option value="Medium">Medium</mat-option>
+                    <mat-option value="Low">Low</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <!-- Status -->
+                <mat-form-field appearance="outline">
+                  <mat-label>Status</mat-label>
+                  <mat-select formControlName="status" [(ngModel)]="tasks.status">
+                    <mat-option value="New">New</mat-option>
+                    <mat-option value="Completed">Completed</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <!-- Submit Button -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col text-center">
+                      <button type="submit" mat-raised-button color="primary">
+                        {{ taskId ? 'Update' : 'Submit' }}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

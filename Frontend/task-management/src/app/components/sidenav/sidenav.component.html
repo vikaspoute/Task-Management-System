@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Task Management System</span>
+  <span class="toolbar-item-spacer"></span>
+  <button mat-icon-button matTooltip="Like">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="Share">
+    <mat-icon>share</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="Notifications">
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="userAccountMenu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
+    <button mat-menu-item (click)="userLogout()">
+      <mat-icon>exit_to_app</mat-icon>Logout
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="side" [opened]="true" class="app-sidenav">
+
+    <div class="scrollwrap scrollwrap_delayed">
+      <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navBar | async">
+          <a class="sidenav-nav-link" *ngIf="!data.items || (data.items && data.items.length === 0)"
+            [routerLink]="[data.routeLink]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            (click)="shrinkItems(data)">
+            <i class="sidenav-link-icon" (click)="data.label === 'Log Out' ? userLogout() : null">
+              <mat-icon>{{data.icon}}</mat-icon> </i>
+            <span class="sidenav-link-text" (click)="data.label === 'Log Out' ? userLogout() : null">
+              {{data.label}}
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet>
+      <!-- <div class="app-sidenav-content">
+      </div> -->
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
